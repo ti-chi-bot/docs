@@ -24,11 +24,15 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: Create Issue From File
-        uses: peter-evans/create-issue-from-file@v3
+        uses: peter-evans/create-issue-from-file@v4
         with:
           title: Broken Link Detected
+<<<<<<< HEAD
           content-filepath: ./lychee/out.md
           assignees: TomShawn
+=======
+          content-filepath: out.md
+>>>>>>> c17fde7d7 (ci: remove assignees in Links, update the deprecated set-output command (#13034))
 
 #      - name: Fail if there were link errors
 #        run: exit ${{ steps.lychee.outputs.exit_code }}
